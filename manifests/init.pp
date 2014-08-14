@@ -7,5 +7,8 @@ class install_rbenv {
   rbenv::build { '2.0.0-p481': 
     global => true 
   }
+
+  # needed for mysql2
+  package {'libmysqlclient-dev':}
  
 }
