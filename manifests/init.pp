@@ -5,7 +5,14 @@ class install_rbenv {
   }
   rbenv::plugin { 'sstephenson/ruby-build': latest => true}
   rbenv::build { '2.0.0-p481': 
-    global => true 
+    global => true,
+    notify => File["update permission to rbenv version"]
+  }
+
+  file {"update permission to rbenv version":
+    path => '/home/ubuntu/.rbenv/version',
+    owner => "ubuntu",
+    group => "adm"
   }
 
   # needed for mysql2
