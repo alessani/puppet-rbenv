@@ -1,4 +1,4 @@
-class install_rbenv::face {
+class install_rbenv::quasar {
   rbenv::build { '2.2.2': 
     global => true 
   }
