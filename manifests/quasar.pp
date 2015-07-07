@@ -19,7 +19,7 @@ class install_rbenv::quasar {
       passenger_root         => '/home/ubuntu/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/passenger-5.0.13',
       passenger_ruby         => '/home/ubuntu/.rbenv/versions/2.2.2/bin/ruby',
       mod_passenger_location => '/home/ubuntu/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/passenger-5.0.13/buildout/apache2/mod_passenger.so',
-      include_build_tools    => true,
+      include_build_tools    => false,
     }
     
   Rbenv::Build['2.2.2'] -> Rbenv::Gem['passenger'] -> Class[Passenger]
