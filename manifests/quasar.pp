@@ -1,5 +1,5 @@
 class install_rbenv::quasar {
-  rbenv::build { '2.2.2': 
+  rbenv::build { '2.3.0': 
     global => true 
   }
 
