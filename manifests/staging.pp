@@ -4,4 +4,8 @@ class install_rbenv::staging {
   }
   
   rbenv::plugin { 'dcarley/rbenv-sudo': }
+  
+  rbenv::gem { 'bundler': 
+    ruby_version => '2.3.3'
+  }
 }
